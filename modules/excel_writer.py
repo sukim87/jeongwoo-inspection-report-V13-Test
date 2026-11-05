@@ -124,9 +124,6 @@ def build_report(data, photos, rotations, modes=None):
     for cell, value in extra_values.items():
         extra[cell] = value
 
-    for ws in (main, extra):
-        ws._images = []
-
     with tempfile.TemporaryDirectory() as temp_dir:
         for index, uploaded in enumerate(photos[:8]):
             degree = rotations[index] if index < len(rotations) else 0
