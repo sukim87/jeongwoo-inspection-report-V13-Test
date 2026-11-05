@@ -46,7 +46,7 @@ def make_html_body(data):
         '<p>제목의 건 검사결과를 아래와 같이 공유드립니다.</p>'
         '<div style="border-left:5px solid #c8102e;background:#f6f7f9;padding:15px 18px;margin:16px 0;max-width:760px">'
         '<div style="font-size:13pt;font-weight:700;margin-bottom:10px">검사결과 요약</div>'
-        f'<div><b>프로젝트:</b> {order_no}</div>'
+        f'<div><b>수주번호:</b> {order_no}</div>'
         f'<div><b>품명:</b> {part_name}</div>'
         f'<div><b>검사종류:</b> {inspection_types}</div>'
         f'<div><b>검사장소:</b> {location}</div>'
@@ -68,7 +68,7 @@ def make_text_body(data):
         f"안녕하십니까.\n품질팀 {inspector}입니다.\n\n"
         "제목의 건 검사결과를 아래와 같이 공유드립니다.\n\n"
         "검사결과 요약\n"
-        f"프로젝트: {data.get('order_no','')}\n"
+        f"수주번호: {data.get('order_no','')}\n"
         f"품명: {data.get('part_name','')}\n"
         f"검사종류: {data.get('types','')}\n"
         f"검사장소: {data.get('inspection_location','')}\n"
